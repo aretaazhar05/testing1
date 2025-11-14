@@ -72,6 +72,41 @@ function renderProduk() {
 
 renderProduk();
 
+// ========== FITUR PENCARIAN PRODUK ==========
+document.getElementById("search").addEventListener("keyup", function () {
+  const keyword = this.value.toLowerCase();
+
+  const filtered = produkList.filter(p =>
+    p.nama.toLowerCase().includes(keyword) ||
+    p.deskripsi.toLowerCase().includes(keyword)
+  );
+
+  renderFiltered(filtered);
+});
+
+function renderFiltered(list) {
+  container.innerHTML = "";
+
+  list.forEach(p => {
+    container.innerHTML += `
+      <div class="product-card">
+        <img src="${p.gambar}" alt="${p.nama}">
+        <div class="product-info">
+          <h3>${p.nama}</h3>
+          <p class="desc">${p.deskripsi}</p>
+          <p class="price">Rp${p.harga.toLocaleString()}</p>
+
+          <button class="add-cart-btn" onclick="addToCart('${p.nama}', ${p.harga})">+ Keranjang</button>
+
+          <a class="order-btn"
+            href="https://wa.me/${nomorWA}?text=Halo,%20saya%20ingin%20pesan%20${encodeURIComponent(p.nama)}"
+            target="_blank">Pesan via WhatsApp</a>
+        </div>
+      </div>`;
+  });
+}
+
+
 
 // ========== POPUP KERANJANG ==========
 document.getElementById("cart-float").onclick = () => {
