@@ -4,31 +4,31 @@ const produkList = [
       {
         nama: "Firetric Kotak Bungkus Rokok Elegan Aluminium Cigarette Case - YH006",
         harga: 14600,
-        gambar: "../anjai/gambar/gambar produk/firetric-kotak-bungkus-rokok-elegan-aluminium-cigarette-case-yh006.jpg",
+        gambar: "../gambar/gambar produk/firetric-kotak-bungkus-rokok-elegan-aluminium-cigarette-case-yh006.jpg",
         deskripsi: "Warna: Hitam"
       },
       {
         nama: "TNS Asbak Rokok Cigar Ashtray Ash Stainless Steel - T9224",
         harga: 10000,
-        gambar: "../anjai/gambar/gambar produk/asbak.jpg",
+        gambar: "../gambar/gambar produk/asbak.jpg",
         deskripsi: "Warna: Hitam"
       },
       {
         nama: "Firetric FOCUS Kotak Rokok 20 Slot dengan Korek Elektrik Plasma - JD-YH093",
         harga: 25200,
-        gambar: "../anjai/gambar/gambar produk/firetric-kotak-rokok-20-slot-dengan-korek-elektrik-pyrotechnic-yh093.jpg",
+        gambar: "../gambar/gambar produk/firetric-kotak-rokok-20-slot-dengan-korek-elektrik-pyrotechnic-yh093.jpg",
         deskripsi: "Material: Aluminium dan Plastik"
       },
       {
         nama: "TNS Asbak Rokok Cigar Ashtray Ash Stainless Steel - T9224",
         harga: 8800,
-        gambar: "../anjai/gambar/gambar produk/tns-asbak-rokok-cigar-ashtray-ash-stainless-steel-t9224.jpg",
+        gambar: "../gambar/gambar produk/tns-asbak-rokok-cigar-ashtray-ash-stainless-steel-t9224.jpg",
         deskripsi: "Material: Stainless Steel"
       },
       {
         nama: "Firetric Korek Api Elektrik Pulse Plasma Cross Double Arc Lighter - JL613-FD",
         harga: 50300,
-        gambar: "../anjai/gambar/gambar produk/TNS Asbak Rokok Cigar Ashtray Ash Stainless Steel - T9224.jpg",
+        gambar: "../gambar/gambar produk/TNS Asbak Rokok Cigar Ashtray Ash Stainless Steel - T9224.jpg",
         deskripsi: "Material: Stainless Steel"
       }
     ];
