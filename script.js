@@ -4,31 +4,31 @@ const produkList = [
       {
         nama: "Firetric Kotak Bungkus Rokok Elegan Aluminium Cigarette Case - YH006",
         harga: 14600,
-        gambar: "../anjai/gambar/gambar produk/firetric-kotak-bungkus-rokok-elegan-aluminium-cigarette-case-yh006.jpg",
+        gambar: "../gambar/gambar produk/firetric-kotak-bungkus-rokok-elegan-aluminium-cigarette-case-yh006.jpg",
         deskripsi: "Warna: Hitam"
       },
       {
         nama: "TNS Asbak Rokok Cigar Ashtray Ash Stainless Steel - T9224",
         harga: 10000,
-        gambar: "../anjai/gambar/gambar produk/asbak.jpg",
+        gambar: "../gambar/gambar produk/asbak.jpg",
         deskripsi: "Warna: Hitam"
       },
       {
         nama: "Firetric FOCUS Kotak Rokok 20 Slot dengan Korek Elektrik Plasma - JD-YH093",
         harga: 25200,
-        gambar: "../anjai/gambar/gambar produk/firetric-kotak-rokok-20-slot-dengan-korek-elektrik-pyrotechnic-yh093.jpg",
+        gambar: "../gambar/gambar produk/firetric-kotak-rokok-20-slot-dengan-korek-elektrik-pyrotechnic-yh093.jpg",
         deskripsi: "Material: Aluminium dan Plastik"
       },
       {
         nama: "TNS Asbak Rokok Cigar Ashtray Ash Stainless Steel - T9224",
         harga: 8800,
-        gambar: "../anjai/gambar/gambar produk/tns-asbak-rokok-cigar-ashtray-ash-stainless-steel-t9224.jpg",
+        gambar: "../gambar/gambar produk/tns-asbak-rokok-cigar-ashtray-ash-stainless-steel-t9224.jpg",
         deskripsi: "Material: Stainless Steel"
       },
       {
         nama: "Firetric Korek Api Elektrik Pulse Plasma Cross Double Arc Lighter - JL613-FD",
         harga: 50300,
-        gambar: "../anjai/gambar/gambar produk/TNS Asbak Rokok Cigar Ashtray Ash Stainless Steel - T9224.jpg",
+        gambar: "../gambar/gambar produk/TNS Asbak Rokok Cigar Ashtray Ash Stainless Steel - T9224.jpg",
         deskripsi: "Material: Stainless Steel"
       }
     ];
@@ -71,6 +71,41 @@ function renderProduk() {
 }
 
 renderProduk();
+
+// ========== FITUR PENCARIAN PRODUK ==========
+document.getElementById("search").addEventListener("keyup", function () {
+  const keyword = this.value.toLowerCase();
+
+  const filtered = produkList.filter(p =>
+    p.nama.toLowerCase().includes(keyword) ||
+    p.deskripsi.toLowerCase().includes(keyword)
+  );
+
+  renderFiltered(filtered);
+});
+
+function renderFiltered(list) {
+  container.innerHTML = "";
+
+  list.forEach(p => {
+    container.innerHTML += `
+      <div class="product-card">
+        <img src="${p.gambar}" alt="${p.nama}">
+        <div class="product-info">
+          <h3>${p.nama}</h3>
+          <p class="desc">${p.deskripsi}</p>
+          <p class="price">Rp${p.harga.toLocaleString()}</p>
+
+          <button class="add-cart-btn" onclick="addToCart('${p.nama}', ${p.harga})">+ Keranjang</button>
+
+          <a class="order-btn"
+            href="https://wa.me/${nomorWA}?text=Halo,%20saya%20ingin%20pesan%20${encodeURIComponent(p.nama)}"
+            target="_blank">Pesan via WhatsApp</a>
+        </div>
+      </div>`;
+  });
+}
+
 
 
 // ========== POPUP KERANJANG ==========
