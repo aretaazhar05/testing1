@@ -1,0 +1,213 @@
+/* ====== STYLE DASAR ====== */
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  background-color: #f6f3ec;
+  color: #3a2f22;
+}
+
+header {
+  background-color: #4b3b29;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2rem;
+  letter-spacing: 2px;
+}
+
+.section {
+  padding: 50px 20px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.about {
+  text-align: center;
+}
+
+.about p {
+  line-height: 1.6;
+  max-width: 700px;
+  margin: 10px auto;
+}
+
+.products {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-top: 40px;
+}
+
+.product-card {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  overflow: hidden;
+  transition: transform 0.2s;
+}
+
+.product-card:hover {
+  transform: scale(1.03);
+}
+
+.product-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.product-info {
+  padding: 15px;
+}
+
+.product-info h3 {
+  margin: 0;
+  font-size: 1.2rem;
+  color: #4b3b29;
+}
+
+.desc {
+  font-size: 0.9rem;
+  color: #7b6a55;
+  font-style: italic;
+  margin-top: 4px;
+}
+
+.price {
+  color: #6b4e2e;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+/* ====== TOMBOL ORDER ====== */
+.order-btn {
+  display: inline-block;
+  margin-top: 10px;
+  background-color: #25d366;
+  color: white;
+  text-decoration: none;
+  padding: 8px 15px;
+  border-radius: 8px;
+}
+
+.add-cart-btn {
+  background:#ff9800;
+  color:white;
+  padding: 8px 15px;
+  display:block;
+  text-align:center;
+  border-radius:8px;
+  margin-top:8px;
+}
+
+/* ====== FLOATING KERANJANG (VERSI GABUNG) ====== */
+#cart-float {
+  border: 2px solid #000; /* garis tepi hitam */
+  padding: 10px 15px;
+  border-radius: 50px;
+  background: white;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 3px 5px rgba(0,0,0,0.2);
+  z-index: 999;
+}
+
+/* ====== POPUP KERANJANG ====== */
+#cart-panel {
+  position: fixed;
+  top:0; left:0;
+  width:100%; height:100%;
+  background: rgba(0,0,0,0.4);
+  display:none;
+  justify-content:center;
+  align-items:center;
+  z-index:99999;
+}
+
+#cart-box {
+  background:#fff;
+  width:90%;
+  max-width:420px;
+  padding:20px;
+  border-radius:15px;
+}
+
+.cart-item {
+  display:flex;
+  justify-content:space-between;
+  margin-bottom:10px;
+}
+
+.checkout-btn {
+  background:#28a745;
+  color:white;
+  padding:10px;
+  width:100%;
+  border-radius:10px;
+  margin-top:10px;
+}
+
+.close-btn {
+  padding:10px;
+  width:100%;
+  border-radius:10px;
+  margin-top:10px;
+}
+
+/* ====== STYLE TOMBOL + - ====== */
+.quantity-control, .cart-qty {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.quantity-btn, .qty-btn {
+  width: 28px;
+  height: 28px;
+  border: none;
+  border-radius: 6px;
+  background: #eaeaea;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 28px;
+  text-align: center;
+  transition: 0.2s;
+}
+
+.quantity-btn:hover, .qty-btn:hover {
+  background: #d4d4d4;
+}
+
+.quantity-number {
+  width: 32px;
+  text-align: center;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.remove-btn {
+  background: none;
+  border: none;
+  color: #d40000;
+  font-size: 20px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+/* ===== TOTAL PRICE ===== */
+.total {
+  margin-top: 8px;
+  font-weight: bold;
+  color: #6b4e2e;
+}
+
+

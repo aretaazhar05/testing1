@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Toko Rokok Digital</title>
+
+  <!-- FILE CSS -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <header>
+    <h1>Toko Rokok Digital</h1>
+    <p>Kualitas terbaik, harga bersahabat</p>
+  </header>
+
+  <!-- Floating Cart -->
+  <div id="cart-float">🛒 <span id="cart-count">0</span></div>
+
+  <!-- Popup Keranjang -->
+  <div id="cart-panel">
+    <div id="cart-box">
+      <h2>Keranjang</h2>
+
+      <div id="cart-items"></div>
+
+      <h3>Total: Rp <span id="cart-total">0</span></h3>
+
+      <button id="checkout" class="checkout-btn">Checkout via WA</button>
+      <button id="close-cart" class="close-btn">Tutup</button>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="about">
+      <h2>Daftar Produk</h2>
+      <p>Pilih produk yang kamu inginkan dan pesan langsung lewat WhatsApp!</p>
+    </div>
+
+    <div class="controls">
+      <input type="text" id="search" placeholder="Cari produk..." />
+      <select id="sort">
+        <option value="">Urutkan</option>
+        <option value="asc">Harga Termurah</option>
+        <option value="desc">Harga Termahal</option>
+      </select>
+    </div>
+
+    <div class="products" id="product-list"></div>
+  </section>
+
+  <footer>© 2025 Toko Rokok Digital - Semua hak dilindungi.</footer>
+
+  <!-- FILE JAVASCRIPT -->
+  <script src="script.js"></script>
+</body>
+</html>
